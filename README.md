@@ -26,7 +26,7 @@ Die verschiedenen Klausur Themen aus der JTAB Vorlesung WS09/10 liegen in im
 <td><code>beans</code></td>
 </tr>
 <tr>
-<td>"EJB 3.0 (EJB 3.0 Erklärung)":http://wiki.github.com/wieczo/JTAB-Klausurbeispiele/ejb30</td>
+<td>"EJB 3.0 (EJB 3.0 Erklärung)":http://wiki.github.com/wieczo/JTAB-Klausurbeispiele/ejb-30</td>
 <td><code>ejb30</code></td>
 </tr>
 </table>
