@@ -22,7 +22,7 @@ end
 if __FILE__ == $0
 
   ## generate read
-  README_TEMPLATE = 'README.erb'
+  README_TEMPLATE = 'README.md'
   README_DESTINATION = 'README'
 
   template_source =  File.dirname(__FILE__) + '/' + README_TEMPLATE
