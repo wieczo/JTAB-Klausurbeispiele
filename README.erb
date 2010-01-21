@@ -1,0 +1,25 @@
+Klausurbeispiele für JTAB WS09
+
+<body>
+  <h1>Themen</h1>
+
+  Die verschiedenen Klausur Themen aus der JTAB Vorlesung WS09/10 liegen in im
+  @package org.nostrapolus.studium@.
+
+  <h2>Themen</h2>
+
+  <% SUBJECTS = {'Listener', 'Threads', 'Animationen', 'Beans', 'EJB30'} %>
+  <table>
+      <tr>
+        <th>Thema</th>
+        <th>Package des Beispielprojekts</th>
+      </tr>
+      <% SUBJECTS.each do |subject| %>
+      <tr>
+          <td>subject</td>
+          <td>subject.downcase</td>
+      </tr>
+      <% end #SUBJECTS.each %>
+  </table>
+</body>
+<!--org.nostrapolus.studium.listeners -> Verwendung von Events, Listeners und Listener-Definition-->
