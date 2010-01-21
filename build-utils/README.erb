@@ -8,7 +8,7 @@ Klausurbeispiele für JTAB WS09
 
   <h2>Themen</h2>
 
-  <% SUBJECTS = {'Listener', 'Threads', 'Animationen', 'Beans', 'EJB30'} %>
+  <% SUBJECTS = ['Listener', 'Threads', 'Animationen', 'Beans', 'EJB30'] %>
   <table>
       <tr>
         <th>Thema</th>
@@ -16,8 +16,8 @@ Klausurbeispiele für JTAB WS09
       </tr>
       <% SUBJECTS.each do |subject| %>
       <tr>
-          <td>subject</td>
-          <td>subject.downcase</td>
+          <td><%=subject%></td>
+          <td><%=subject.downcase%></td>
       </tr>
       <% end #SUBJECTS.each %>
   </table>
