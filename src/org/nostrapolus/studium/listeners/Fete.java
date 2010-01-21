@@ -33,7 +33,7 @@ public class Fete {
     public void setStatus(FeteStatus status) {
         if (this.status != status) {
             this.status = status;
-            callStatusChange();
+            callFeteStatusChangedListeners();
         }
     }
 
@@ -46,7 +46,7 @@ public class Fete {
         listeners.remove(listener);
     }
 
-    private void callStatusChange() {
+    private void callFeteStatusChangedListeners() {
         LinkedList<FeteStatusChangedListener> copy = new LinkedList<FeteStatusChangedListener>(listeners);
         for (FeteStatusChangedListener l : copy)
             l.feteStatusChanged(this);
