@@ -20,15 +20,18 @@ end
 
 
 if __FILE__ == $0
-	README_TEMPLATE = 'README.erb'
+
+  ## generate read
+  README_TEMPLATE = 'README.erb'
   README_DESTINATION = 'README'
-	#parentDirectory = Dir.getWd +'/../'
-	
-  template_source =  Dir.getwd + '/' + README_TEMPLATE
-  target_path = Dir.getwd + '/../' + README_DESTINATION
-	
+
+  template_source =  File.dirname(__FILE__) + '/' + README_TEMPLATE
+  target_path = File.dirname(__FILE__)  + '/../' + README_DESTINATION
+
   File.open(target_path, 'w') do |file|
-    file.write QuickTemplate.new(template_source).exec()
+   file.write QuickTemplate.new(template_source).exec()
   end
-	
+
+   ## run git commit with comment
+   `"git commit -am '#{ARGV[1]}'"`
 end

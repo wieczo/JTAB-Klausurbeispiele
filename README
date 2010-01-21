@@ -1,8 +1,7 @@
 Klausurbeispiele für JTAB WS09
-<body>
   <h1>Themen</h1>
-  Die verschiedenen Klausur Themen aus der JTAB Vorlesung WS09/10 liegen in im
-  @package org.nostrapolus.studium@.
+  <p>Die verschiedenen Klausur Themen aus der JTAB Vorlesung WS09/10 liegen in im
+    <code>package org.nostrapolus.studium</code>.</p>
   <h2>Themen</h2>
   
   <table>
@@ -13,26 +12,26 @@ Klausurbeispiele für JTAB WS09
       
       <tr>
           <td>Listener</td>
-          <td>listener</td>
+          <td><code>listener</code></td>
       </tr>
       
       <tr>
           <td>Threads</td>
-          <td>threads</td>
+          <td><code>threads</code></td>
       </tr>
       
       <tr>
           <td>Animationen</td>
-          <td>animationen</td>
+          <td><code>animationen</code></td>
       </tr>
       
       <tr>
           <td>Beans</td>
-          <td>beans</td>
+          <td><code>beans</code></td>
       </tr>
       
       <tr>
           <td>EJB30</td>
-          <td>ejb30</td>
+          <td><code>ejb30</code></td>
       </tr>
       
