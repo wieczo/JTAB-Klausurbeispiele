@@ -47,7 +47,8 @@ public class Fete {
     }
 
     private void callStatusChange() {
-        for (FeteStatusChangedListener l : listeners)
+        LinkedList<FeteStatusChangedListener> copy = new LinkedList<FeteStatusChangedListener>(listeners);
+        for (FeteStatusChangedListener l : copy)
             l.feteStatusChanged(this);
     }
 
