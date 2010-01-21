@@ -18,85 +18,27 @@ import org.nostrapolus.studium.listeners.Fete.FeteStatus;
  * @author wieczo
  */
 public class FeteTest {
-    private Fete fete;
-    private FeteStatus newStatus;
-
-    public FeteTest() {
-    }
-
-    @BeforeClass
-    public static void setUpClass() throws Exception {
-    }
-
-    @AfterClass
-    public static void tearDownClass() throws Exception {
-    }
-
-    @Before
-    public void setUp() {
-        fete = new Fete();
-        fete.addFeteStatusChangedListener(new FeteStatusChangedListener() {
-            public void feteStatusChanged(Fete fete) {
-                newStatus = fete.getStatus();
-            }
-        });
-    }
-
-    @After
-    public void tearDown() {
-    }
+    FeteStatus newStatus;
 
     /**
      * Test of getStatus method, of class Fete.
      */
     @Test
     public void testChangeAndGetStatus() {
+        Fete fete;
         System.out.println("getStatus");
-        Fete instance = new Fete();
+        fete = new Fete();
+        // Add EventListener
+        fete.addFeteStatusChangedListener(new FeteStatusChangedListener() {
+            public void feteStatusChanged(Fete fete) {
+                newStatus = fete.getStatus();
+            }
+        });
         
         for (Fete.FeteStatus expResult : Fete.FeteStatus.values()) {
-            fete.setStatus(s);
-            assertEquals(expResult, newStatus);
+            fete.setStatus(expResult);
+            assertEquals(expResult, fete.getStatus());
         }
-    }
-
-    /**
-     * Test of setStatus method, of class Fete.
-     */
-    @Test
-    public void testSetStatus() {
-        System.out.println("setStatus");
-        FeteStatus status = null;
-        Fete instance = new Fete();
-        instance.setStatus(status);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of addFeteStatusChangedListener method, of class Fete.
-     */
-    @Test
-    public void testAddFeteStatusChangedListener() {
-        System.out.println("addFeteStatusChangedListener");
-        FeteStatusChangedListener listener = null;
-        Fete instance = new Fete();
-        instance.addFeteStatusChangedListener(listener);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
-    }
-
-    /**
-     * Test of removeFeteStatusChangedListener method, of class Fete.
-     */
-    @Test
-    public void testRemoveFeteStatusChangedListener() {
-        System.out.println("removeFeteStatusChangedListener");
-        FeteStatusChangedListener listener = null;
-        Fete instance = new Fete();
-        instance.removeFeteStatusChangedListener(listener);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
 }
